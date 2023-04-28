@@ -1,0 +1,134 @@
+<html>
+<body>
+    <div class="login">
+       
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Default payment Prediction</legend>
+        </h1>
+        
+        <div class="mb-3">
+            <label class="form-label">SEX</label>
+            <input class="form-control" type="number" name="SEX"
+                placeholder="Enter your SEX" min='1' max='2' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">EDUCATION</label>
+            <input class="form-control" type="number" name="EDUCATION"
+                placeholder="Enter your EDUCATION" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MARRIAGE</label>
+            <input class="form-control" type="number" name="MARRIAGE"
+                placeholder="Enter your MARRIAGE" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">LIMIT_BAL</label>
+            <input class="form-control" type="number" name="LIMIT_BAL"
+                placeholder="Enter your LIMIT_BAL" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">AGE</label>
+            <input class="form-control" type="number" name="AGE"
+                placeholder="Enter your AGE" min='18' max='90' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_0</label>
+            <input class="form-control" type="number" name="PAY_0"
+                placeholder="Enter your PAY_0" min='-5' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_2</label>
+            <input class="form-control" type="number" name="PAY_2"
+                placeholder="Enter your PAY_2" min='-5' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_3</label>
+            <input class="form-control" type="number" name="PAY_3"
+                placeholder="Enter your PAY_3" min='-5' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_4</label>
+            <input class="form-control" type="number" name="PAY_4"
+                placeholder="Enter your PAY_4" min='-5' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_5</label>
+            <input class="form-control" type="number" name="PAY_5"
+                placeholder="Enter your PAY_5" min='-5' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_6</label>
+            <input class="form-control" type="number" name="PAY_6"
+                placeholder="Enter your PAY_6" min='-5' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BILL_AMT1</label>
+            <input class="form-control" type="number" name="BILL_AMT1"
+                placeholder="Enter your BILL_AMT1" min='-200000' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BILL_AMT2</label>
+            <input class="form-control" type="number" name="BILL_AMT2"
+                placeholder="Enter your BILL_AMT2" min='-200000' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BILL_AMT3</label>
+            <input class="form-control" type="number" name="BILL_AMT3"
+                placeholder="Enter your BILL_AMT2" min='-200000' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BILL_AMT4</label>
+            <input class="form-control" type="number" name="BILL_AMT4"
+                placeholder="Enter your BILL_AMT4" min='-200000' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BILL_AMT5</label>
+            <input class="form-control" type="number" name="BILL_AMT5"
+                placeholder="Enter your BILL_AMT5" min='-200000' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BILL_AMT6</label>
+            <input class="form-control" type="number" name="BILL_AMT6"
+                placeholder="Enter your BILL_AMT6" min='-200000' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_AMT1</label>
+            <input class="form-control" type="number" name="PAY_AMT1"
+                placeholder="Enter your PAY_AMT1" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_AMT2</label>
+            <input class="form-control" type="number" name="PAY_AMT2"
+                placeholder="Enter your PAY_AMT2" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_AMT3</label>
+            <input class="form-control" type="number" name="PAY_AMT3"
+                placeholder="Enter your PAY_AMT3" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_AMT4</label>
+            <input class="form-control" type="number" name="PAY_AMT4"
+                placeholder="Enter your PAY_AMT4" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_AMT5</label>
+            <input class="form-control" type="number" name="PAY_AMT5"
+                placeholder="Enter your PAY_AMT5" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAY_AMT6</label>
+            <input class="form-control" type="number" name="PAY_AMT6"
+                placeholder="Enter your PAY_AMT6" min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
